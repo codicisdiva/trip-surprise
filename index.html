@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Baby</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="floating-bg">
+    <span>🐷</span>
+    <span>💗</span>
+    <span>🐽</span>
+    <span>💕</span>
+    <span>🐷</span>
+  </div>
+
+  <section id="opening" class="screen active">
+    <h1>HEY Baby!! 💖</h1>
+  </section>
+
+  <section id="question1" class="screen">
+    <div class="card">
+      <h2>Wanna get a lil surprise from your baby?</h2>
+      <button onclick="showLetter()">Yes 💕</button>
+      <button id="no1" onclick="moveNoButton('no1')">No</button>
+      <p id="try1"></p>
+    </div>
+  </section>
+
+  <section id="letterPage" class="screen">
+    <div class="paper">
+      <p>
+        Hi Baby,<br><br>
+        I don't know if you will find this good or worst but I wanted to get you some gift.
+        Just go with the flow. I will not rush you or push you.
+        Do whatever you feel like doing but don't push me hard way.
+        I planned something for us. Not with a bad intention, I promise.
+        I just want to create some best memories with you before things changes.
+      </p>
+
+      <h2>Are You Excited??</h2>
+      <button onclick="showFinal()">Yes 😭💗</button>
+      <button id="no2" onclick="moveNoButton('no2')">No</button>
+      <p id="try2"></p>
+    </div>
+  </section>
+
+  <section id="finalPage" class="screen">
+    <div>
+      <h1>🎉 We are going to New York! 🎉</h1>
+      <p class="final-text">Pack your cute outfits baby 💕</p>
+      <button onclick="showPlan()">Continue 💌</button>
+      <div id="confetti"></div>
+    </div>
+  </section>
+
+  <section id="planPage" class="screen">
+    <div class="paper">
+      <p>
+        I planned to go to Ocean City, but it is a long trip and there is no direct bus.
+        I will take you there when I get my own car.
+        For now, let's go to New York.
+        You don't have to worry about anything.
+        We will go on July 6 and return on July 7.
+        I want to understand you better as a human.
+        I promise you I won't let you feel unsafe.
+        Think of this like a short thank you gift for you.
+        I am always grateful for having you in my life.
+        I don't know what the future holds for me, but at the present, I AM HAPPY.
+        I am happy because I got a chance to understand you.
+        Thank you for everything.
+        I LOVE YOU 💖
+      </p>
+
+      <br><br>
+
+      <button onclick="showQuotes()">Continue ❤️</button>
+    </div>
+  </section>
+
+  <section id="quotesPage" class="screen">
+    <div class="paper">
+      <h2>❤️ Here are my copied quotes for you ❤️</h2>
+
+      <br>
+
+      <p>
+        You're my "nothing".<br><br>
+
+        When people see me<br>
+        lost in thought<br>
+        and ask me,<br><br>
+
+        "What are you thinking about?"<br><br>
+
+        I smile and say,<br>
+        "Nothing."<br><br>
+
+        But that nothing is always you. ❤️
+      </p>
+
+      <br><br>
+
+      <button onclick="showRating()">Continue 💕</button>
+    </div>
+  </section>
+
+  <section id="ratingPage" class="screen">
+    <div class="card">
+      <h2>How much do you rate my work? 🥺</h2>
+
+      <input 
+        type="range" 
+        id="ratingSlider" 
+        min="0" 
+        max="10" 
+        value="5" 
+        oninput="updateRating()"
+      >
+
+      <h1 id="ratingNumber">5</h1>
+      <p id="ratingFace">😕 Disappointed</p>
+
+      <br><br>
+
+      <button onclick="showThankYou()">Continue 💖</button>
+    </div>
+  </section>
+
+  <section id="thankYouPage" class="screen">
+    <div class="card">
+      <h1>Thank you so much for having patience till the end 💖</h1>
+      <p class="final-text">I love you so much 🥺💕</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

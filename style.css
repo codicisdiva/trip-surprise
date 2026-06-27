@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffb6d9, #c8a2ff, #ff8ec7);
+}
+
+.screen {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+}
+
+.active {
+  display: flex;
+}
+
+h1 {
+  color: white;
+  font-size: 55px;
+  text-shadow: 3px 3px 10px #9b3f8f;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+}
+
+.card h2 {
+  color: #9b2f8f;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #ff69b4;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #b968ff;
+}
+
+.paper {
+  background: #f3d6a3;
+  color: #5a3218;
+  width: 90%;
+  max-width: 650px;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(70, 35, 10, 0.5);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.paper h2 {
+  margin-top: 25px;
+}
+
+.final-text {
+  color: white;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.floating-bg span {
+  position: absolute;
+  font-size: 35px;
+  animation: float 8s infinite linear;
+}
+
+.floating-bg span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-bg span:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.floating-bg span:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.floating-bg span:nth-child(4) {
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.floating-bg span:nth-child(5) {
+  left: 90%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  from {
+    top: 100%;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top: -10%;
+    transform: rotate(360deg);
+  }
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  font-size: 25px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    top: 110%;
+    transform: rotate(720deg);
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .card,
+  .paper {
+    width: 92%;
+    padding: 25px;
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+
+  .final-text {
+    font-size: 20px;
+  }
+
+  input[type="range"] {
+    width: 90%;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+
+  .screen {
+    min-height: 100vh;
+    height: auto;
+  }
+}
